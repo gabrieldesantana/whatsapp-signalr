@@ -1,0 +1,130 @@
+﻿@page
+ <div class="grid">
+    <div class="principal">
+
+      <div class="topo">
+        <img class="foto-perfil" src="./img/profile-pic.jpeg" alt="">
+        <div class="icones-topo">
+          <a class="icone-topo" href="/conversa.html" target="_blank"><img src="./img/icon-status.png" alt=""></a>
+          <a class="icone-topo" href="#"><img src="./img/icon-conversas.png" alt=""></a>
+          <a class="icone-topo" href="#"><img src="./img/icon-menu.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="notificacao">
+
+        <div class="icones-notificacao">
+          <img class="icone-notificacao" src="./img/bell-slash-solid.svg" alt="">
+        </div>
+
+        <div class="texto-notificacao">
+          <h4 class="notificacao-titulo">Receba notificações de novas mensagens</h4>
+          <p class="notificacao-paragrafo">Ativar notificações na área de trabalho</p>
+        </div>
+
+      </div>
+
+      <div class="buscar">
+        <!-- <img src="" alt=""> -->
+        <input id="buscar-barra" type="text" placeholder="Pesquisar ou começar uma nova conversa">
+      </div>
+
+
+      <div class="conversas">
+
+        <div class="arquivadas">
+
+          <div class="icones-arquivadas">
+            <img id="icone-arquivadas" src="./img/icon-arquivadas.png" alt="">
+          </div>
+
+          <div class="arquivadas-texto">
+            <h3>Arquivadas</h3>
+          </div>
+
+        </div>
+
+         <a asp-area="" asp-page="/Conversa" class="conversa conversa-link">
+
+          <img class="foto-perfil" src="/img/group-icon.png" alt="">
+          <!-- <div class="conversa-titulo"> -->
+           <h2 class="conversa-nome group-link">Grupo da Faculdade</h2>
+          <p class="conversa-data">Quinta-feira</p>
+          <!-- </div> -->
+          <!-- <div class="conversa-mensagem"> -->
+          <p class="conversa-mensagem">Pedro: Vocês vão hoje?</p>
+          <!-- </div> -->
+        </a>
+
+        <div class="conversa">
+
+          <img class="foto-perfil" src="/img/person-icon.png" alt="">
+          <h2 class="conversa-nome">Maria</h2>
+          <p class="conversa-data">14:14</p>
+          <p class="conversa-mensagem">Bom descanso!</p>
+        </div>
+
+        <div class="conversa">
+
+          <img class="foto-perfil" src="/img/person-icon.png" alt="">
+          <h2 class="conversa-nome">João</h2>
+          <p class="conversa-data">14:14</p>
+          <p class="conversa-mensagem">Estudou ontem ou nem?</p>
+        </div>
+        <div class="conversa">
+
+          <img class="foto-perfil" src="/img/person-icon.png" alt="">
+          <h2 class="conversa-nome">Pedro</h2>
+          <p class="conversa-data">14:14</p>
+          <p class="conversa-mensagem">Acho que vou faltar hoje</p>
+        </div>
+
+        <div class="conversa">
+
+          <img class="foto-perfil" src="/img/person-icon.png" alt="">
+          <h2 class="conversa-nome">Felipe</h2>
+          <p class="conversa-data">14:14</p>
+          <p class="conversa-mensagem">Fala mestre, tudo certo?</p>
+        </div>
+
+        <div class="conversa">
+
+          <img class="foto-perfil" src="/img/person-icon.png" alt="">
+          <h2 class="conversa-nome">Marcela</h2>
+          <p class="conversa-data">14:14</p>
+          <p class="conversa-mensagem">Quando tiver um tempinho, me liga</p>
+        </div>
+
+
+      </div>
+
+    </div>
+    <div class="secundaria">
+
+      <div class="secundaria-main">
+
+        <img src="./img/second-img.png" alt="">
+
+        <div class="secundaria-titulos">
+          <h1 class="secundaria-titulo">WhatApp Web</h1>
+          <span>Novo</span>
+        </div>
+
+        <p class="secundaria-paragrafo">Agora você pode enviar e receber mensagens sem precisar manter seu celular conectado à internet.</p>
+        <p class="secundaria-paragrafo">Use o WhatApp em até quatro aparelhos conectados e um celular ao mesmo tempo.</p>
+        <div class="secundaria-downloads">
+          <img src="./img/laptop-solid.svg" alt="">
+          <p class="secundaria-download">Make calls from desktop with WhatApp for Windows. <a href="#">Baixe aqui.</a></p>
+        </div>
+
+      </div>
+
+      <footer class="footer">
+        <img src="./img/lock-solid.svg" alt="">
+        <p>Protegido com a criptografia de ponta a ponta</p>
+      </footer>
+    </div>
+
+  </div>
+
+  <script src="https://kit.fontawesome.com/adf037fcea.js" crossorigin="anonymous"></script>

@@ -1,0 +1,186 @@
+:root {
+    --fundoSecundaria: #222e35;
+    --paragrafoSecundaria: #8696a0;
+    --fundoConversasPrimaria: #111b21;
+    --fundoNotificacoesPrimaria: #182229;
+    --fundoTopoPrimaria: #202c33;
+    --fundoBarraBusca: #202c33;
+    --fundoIconeNotificacao: #53bdeb;
+    --icone-um: #aebac1;
+    --icone-dois: #798892;
+    --white: #fff;
+    --title: #181818;
+    --text: #474747;
+}
+
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button,
+input {
+    border: 0;
+}
+
+    button:focus,
+    input:focus {
+        border: 0;
+    }
+
+body {
+    /* background: #e21; */
+}
+
+.secundaria-topo {
+    background: var(--fundoTopoPrimaria);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.secundaria-conversa {
+    background-color: black;
+    background-image: url("./img/2224368.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+.input-name {
+    padding: 5px;
+    border-radius: 4px;
+    background: gray;
+    color: var(--white);
+    text-indent: 5px;
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+}
+
+input {
+    border: 0;
+    outline: none;
+}
+
+    input:focus {
+        border: 0;
+    }
+
+.secundaria-topo {
+}
+
+.secundaria-principal {
+    height: 504px;
+}
+
+.secundaria-fim {
+    height: 60px;
+    background: beige;
+}
+
+.conversa-titulos {
+    display: flex;
+    gap: 20px;
+}
+
+.conversa-icones {
+    display: flex;
+    gap: 15px;
+}
+
+.secundaria-topo .titulo {
+    font-size: 1.2rem;
+}
+
+.secundaria-conversa {
+    display: grid;
+}
+
+.secundaria-fim {
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+    background: #202c33;
+    justify-content: center;
+}
+
+    .secundaria-fim img {
+        max-width: 20px;
+    }
+
+    .secundaria-fim input {
+        padding: 10px;
+        border-radius: 8px;
+        width: calc(95vw - 56%);
+        background: #2a3942;
+        color: var(--white);
+    }
+
+input[type="image"] {
+    width: 50px;
+}
+
+.icone-topo-conversa {
+    max-width: 20px;
+}
+
+@media (max-width: 789px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .principal {
+        display: none;
+    }
+
+    .conversa::after {
+        content: "";
+        width: calc(100vw - 10%);
+        height: 1px;
+        background: var(--text);
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+}

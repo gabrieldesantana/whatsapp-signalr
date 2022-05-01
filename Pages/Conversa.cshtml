@@ -1,0 +1,406 @@
+﻿@page
+@model PrivacyModel
+@{
+    //ViewData["Title"] = "(21) WhatsApp";
+}
+@*<h1>@ViewData["Title"]</h1>*@
+
+<style>
+    
+      :root {
+  --fundoSecundaria: #222e35;
+  --paragrafoSecundaria: #8696a0;
+  --fundoConversasPrimaria: #111b21;
+  --fundoNotificacoesPrimaria: #182229;
+  --fundoTopoPrimaria: #202c33;
+  --fundoBarraBusca: #202c33;
+  --fundoIconeNotificacao: #53bdeb;
+
+  --icone-um: #aebac1;
+  --icone-dois: #798892;
+
+  --white: #fff;
+  --title: #181818;
+  --text: #474747;
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+button,
+input {
+  border: 0;
+}
+button:focus,
+input:focus {
+  border: 0;
+}
+
+body {
+  /* background: #e21; */
+}
+
+.group-link
+{
+    color: #00A884;
+    font-weight: 500;
+    animation: data-msg 0s infinite;
+ animation-direction: alternate-reverse;
+}
+
+.secundaria-topo {
+  background: var(--fundoTopoPrimaria);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.secundaria-conversa {
+  background-color: black;
+  background-image: url("./img/2224368.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.input-name {
+  padding: 5px;
+  border-radius: 4px;
+  background: gray;
+  color: var(--white);
+  text-indent: 5px;
+  outline: none;
+}
+
+::placeholder {
+  color: white;
+}
+
+input {
+  border: 0;
+  outline: none;
+}
+
+input:focus {
+  border: 0;
+}
+
+.secundaria-topo {
+}
+
+.secundaria-topo .titulo
+{
+    
+}
+.secundaria-principal {
+  height: 504px;
+}
+.secundaria-fim {
+  height: 60px;
+  background: beige;
+}
+
+.conversa-titulos {
+  display: flex;
+  gap: 20px;
+}
+.conversa-icones {
+  display: flex;
+  gap: 15px;
+}
+
+.secundaria-topo .titulo {
+  font-size: 1.2rem;
+}
+
+.secundaria-conversa {
+  display: grid;
+}
+
+.secundaria-fim {
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+  background: #202c33;
+  justify-content: center;
+}
+
+.secundaria-fim img {
+  max-width: 20px;
+}
+
+.secundaria-fim input {
+  padding: 10px;
+  border-radius: 8px;
+  width: calc(95vw - 56%);
+  background: #2a3942;
+  color: var(--white);
+}
+
+input[type="image"] {
+  width: 50px;
+}
+
+.icone-topo-conversa {
+  max-width: 20px;
+}
+
+.row{
+/*    display: grid;
+    grid-template-columns: 1fr 1fr;*/
+    background: #e21;
+}
+
+
+.messages-list
+{
+
+}
+
+
+#messagesList
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 20px 0px 0px;
+}
+
+#messagesList li
+{
+    
+   
+    color: white;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 4px;
+    width: 200px;
+    text-align: left;
+    
+}
+
+#messagesList li:nth-child(even)
+{
+ background: #202C33;
+ align-self: start;
+ margin: 0px 0px 0px 20px;
+}
+
+
+#messagesList li:nth-child(odd)
+{
+    align-self: end;
+    background: #005C4B;
+    margin: 0px 0px 0px 20px;
+}
+
+@@media (max-width: 789px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .principal {
+    display: none;
+  }
+
+  .conversa::after {
+    content: "";
+    width: calc(100vw - 10%);
+    height: 1px;
+    background: var(--text);
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+  }
+}
+
+
+</style>
+
+   <div class="grid">
+
+    <div class="principal">
+
+      <div class="topo">
+        <img class="foto-perfil" src="./img/profile-pic.jpeg" alt="">
+        <div class="icones-topo">
+          <a class="icone-topo" href="/index.html" target="_blank"><img src="./img/icon-status.png" alt=""></a>
+          <a class="icone-topo" href="#"><img src="./img/icon-conversas.png" alt=""></a>
+          <a class="icone-topo" href="#"><img src="./img/icon-menu.png" alt=""></a>
+        </div>
+      </div>
+
+      <div class="notificacao">
+
+        <div class="icones-notificacao">
+          <img class="icone-notificacao" src="./img/bell-slash-solid.svg" alt="">
+        </div>
+
+        <div class="texto-notificacao">
+          <h4 class="notificacao-titulo">Receba notificações de novas mensagens</h4>
+          <p class="notificacao-paragrafo">Ativar notificações na área de trabalho</p>
+        </div>
+
+      </div>
+
+      <div class="buscar">
+        <!-- <img src="" alt=""> -->
+        <input id="buscar-barra" type="text" placeholder="Pesquisar ou começar uma nova conversa">
+      </div>
+
+
+      <div class="conversas">
+
+        <div class="arquivadas">
+
+          <div class="icones-arquivadas">
+            <img id="icone-arquivadas" src="./img/icon-arquivadas.png" alt="">
+          </div>
+
+          <div class="arquivadas-texto">
+            <h3>Arquivadas</h3>
+          </div>
+
+        </div>
+
+        <div class="conversa">
+
+          <img class="foto-perfil" src="/img/group-icon.png" alt="">
+          <h2 class="conversa-nome group-link">Grupo da Faculdade</h2>
+          <p class="conversa-data">Quinta-feira</p>
+           <p class="conversa-mensagem">Pedro: Vocês vão hoje?</p>
+        </div>
+         <div class="conversa">
+
+          <img class="foto-perfil" src="/img/person-icon.png" alt="">
+          <h2 class="conversa-nome">Maria</h2>
+          <p class="conversa-data">14:14</p>
+          <p class="conversa-mensagem">Bom descanso!</p>
+        </div>
+
+        <div class="conversa">
+
+          <img class="foto-perfil" src="/img/person-icon.png" alt="">
+          <h2 class="conversa-nome">João</h2>
+          <p class="conversa-data">14:14</p>
+          <p class="conversa-mensagem">Estudou ontem ou nem?</p>
+        </div>
+        <div class="conversa">
+
+          <img class="foto-perfil" src="/img/person-icon.png" alt="">
+          <h2 class="conversa-nome">Pedro</h2>
+          <p class="conversa-data">14:14</p>
+          <p class="conversa-mensagem">Acho que vou faltar hoje</p>
+        </div>
+
+        <div class="conversa">
+
+          <img class="foto-perfil" src="/img/person-icon.png" alt="">
+          <h2 class="conversa-nome">Felipe</h2>
+          <p class="conversa-data">14:14</p>
+          <p class="conversa-mensagem">Fala mestre, tudo certo?</p>
+        </div>
+
+        <div class="conversa">
+
+          <img class="foto-perfil" src="/img/person-icon.png" alt="">
+          <h2 class="conversa-nome">Marcela</h2>
+          <p class="conversa-data">14:14</p>
+          <p class="conversa-mensagem">Quando tiver um tempinho, me liga</p>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="secundaria-conversa">
+
+      <div class="secundaria-topo">
+
+        <div class="conversa-titulos">
+          <img class="foto-perfil" src="/img/group-icon.png" alt="">
+
+          <div class="titulo">
+            <h2>Grupo da Faculdade</h2>
+            <input class="input-name" id="userInput" type="text" placeholder="Insira seu nome">
+          </div>
+
+        </div>
+
+
+        <div class="conversa-icones">
+          <img class="icone-topo-conversa" src="./img/magnifying-glass-solid.svg" alt="">
+          <img class="icone-topo-conversa" src="./img/icon-menu.png" alt="">
+        </div>
+
+      </div>
+
+      <div class="secundaria-principal">
+
+@*      <div class="row">*@
+
+        <div class="messages-list">
+            <ul id="messagesList"></ul>
+        </div>
+
+@*    </div>*@
+
+      </div>
+      <div class="secundaria-fim">
+
+        <!-- <div class="fim-icones"> -->
+        <img class="fim-icone" src="./img/face-smile-solid.svg" alt="">
+        <img class="fim-icone" src="./img/paperclip-solid.svg" alt="">
+        <!-- </div> -->
+
+        <input type="text" id="messageInput" placeholder="Mensagem">
+
+        <!-- <div class="send-buttons"> -->
+        <input type="image" src="./img/paper-plane-solid.svg" alt="" id="sendButton">
+
+        <!-- </div> -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="https://kit.fontawesome.com/adf037fcea.js" crossorigin="anonymous"></script>
+  <script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
+
